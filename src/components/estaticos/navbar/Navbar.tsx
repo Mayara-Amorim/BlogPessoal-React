@@ -80,12 +80,9 @@ function Navbar() {
 
     return (
         <>
-        navbarComponent
+            {navbarComponent}
         </>
     )
 }
 export default Navbar;
 
-function setToken(arg0: string) {
-    throw new Error('Function not implemented.');
-}
