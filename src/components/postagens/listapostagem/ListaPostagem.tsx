@@ -58,14 +58,14 @@ function ListaPostagem() {
                     <CardActions>
                         <Box display="flex" justifyContent="center" mb={1.5}>
 
-                                    <Link to={`/formularioTema/${post.id}`} className="text-decorator-none" >
+                                    <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
                                 <Box mx={1}>
                                     <Button variant="contained" className="marginLeft" size='small' color="primary" >
                                         atualizar
                                     </Button>
                                 </Box>
                             </Link>
-                                    <Link to= {`/formularioTema/${post.id}`} className="text-decorator-none">
+                                    <Link to= {`/deletarPostagem/${post.id}`} className="text-decorator-none">
                                 <Box mx={1}>
                                     <Button variant="contained" size='small' color="secondary">
                                         deletar
