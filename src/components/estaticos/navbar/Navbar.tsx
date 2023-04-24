@@ -4,10 +4,13 @@ import { Box } from "@mui/material"
 import { Toolbar } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import "./Navbar.css"
-import useLocalStorage from 'react-use-localstorage';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function Navbar() {
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
     let navigate = useNavigate();
 
     function goLogout() {
@@ -75,3 +78,7 @@ function Navbar() {
     )
 }
 export default Navbar;
+
+function setToken(arg0: string) {
+    throw new Error('Function not implemented.');
+}
